@@ -1,0 +1,38 @@
+<svg viewBox="0, 0, 100, 100">
+  <circle
+    class="progress-circle"
+    [attr.stroke-width]="stroke"
+    fill="transparent"
+    [attr.stroke]="placeholderColor"
+    r="46"
+    cx="50"
+    cy="50"
+  />
+  <circle
+    class="progress-circle"
+    [attr.stroke-width]="stroke"
+    [style.strokeDasharray]="circumference"
+    [style.strokeDashoffset]="strokeDashoffset"
+    fill="transparent"
+    [attr.stroke]="color"
+    [attr.stroke-linecap]="rounded ? 'round' : 'butt'"
+    r="46"
+    cx="50"
+    cy="50"
+  />
+</svg>
+
+<div class="inner-radial-container">
+
+  <span
+    [style.color]="fontColor ? fontColor : color">
+    {{percentage}}%
+  </span>
+
+  <div class="meta-container">
+    <ng-content></ng-content>
+  </div>
+
+</div>
+
+

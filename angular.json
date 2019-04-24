@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ngx-radial": {
+      "root": "projects/ngx-radial",
+      "sourceRoot": "projects/ngx-radial/src",
+      "projectType": "library",
+      "prefix": "nr",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-radial/tsconfig.lib.json",
+            "project": "projects/ngx-radial/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-radial/src/test.ts",
+            "tsConfig": "projects/ngx-radial/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-radial/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-radial/tsconfig.lib.json",
+              "projects/ngx-radial/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-radial-demo"

@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  color: blue;
+  font-family: 'Roboto', sans-serif;
+}
+
+.inner-radial-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  span {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.progress-circle {
+  transition: stroke-dashoffset 0.6s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.meta-container {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+}
